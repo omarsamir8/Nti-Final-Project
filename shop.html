@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <title>Shop Page</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="containeer">
+      <header>
+        <div class="logo">
+          <h1><a href="#">OneTech</a></h1>
+        </div>
+        <div class="search">
+          <form>
+            <input type="text" placeholder="Search For Product" />
+            <!-- Example single danger button -->
+            <div class="btn-group dropdoown">
+              <button
+                type="button"
+                class="btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="
+                  border: 1px solid rgb(179, 177, 177);
+                  border-radius: 0;
+                  border-left: 0;
+                  color: gray;
+                "
+              >
+                All Category
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Computers</a></li>
+                <li><a class="dropdown-item" href="#">Laptops </a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Cameras</a>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Hardware</a></li>
+                <li><a class="dropdown-item" href="#">Smartphones</a></li>
+              </ul>
+            </div>
+            <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </form>
+        </div>
+        <div class="cartloveContainer">
+          <div>
+            <img src="./img/wishlist_cart/download.webp" alt="" />
+            <div class="cartdetails">
+              <h3>Wishlist</h3>
+              <p>115</p>
+            </div>
+          </div>
+          <div>
+            <a href="cart.html"
+              ><img src="./img/wishlist_cart/download (4).webp" alt=""
+            /></a>
+            <div class="cartdetails">
+              <a style="text-decoration: none; color: black" href="cart.html"
+                ><h3>Cart</h3></a
+              >
+              <p>$364</p>
+            </div>
+            <div class="number"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- navbar -->
+    <nav>
+      <div class="nav-logo">
+        <i class="fa-solid fa-bars"></i>
+        <div class="btn-group dropdoown">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="
+              border: none;
+              color: white;
+              font-size: 20px;
+              font-weight: 500;
+            "
+          >
+            CATEGORIES
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Computers</a></li>
+            <li><a class="dropdown-item" href="#">Laptops </a></li>
+            <li>
+              <a class="dropdown-item" href="#">Cameras</a>
+            </li>
+            <li><a class="dropdown-item" href="#">Hardware</a></li>
+            <li><a class="dropdown-item" href="#">Smartphones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-links">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#Home">Super Deals</a>
+          </li>
+          <li>
+            <a href="#Home">New Arrival</a>
+          </li>
+          <li  style="position: relative;" class="nav-item position-relative dropitem">
+            <a id="PagesLink" class="nav-link" href="#">Pages <i class="fas fa-angle-down"></i></a>
+            <ul class="custom_list list-unstyled shadow ">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- shop hero -->
+     <section class="shopHero">
+        <h2>Smartphones & Tablets</h2>
+        <div class="shopOverlay"></div>
+     </section>
+     <!-- shop products -->
+      <section class="shopDetails">
+        <div class="shopFilters">
+            <div class="filterCategories">
+                <h5>Categories</h5>
+                <p>Computers & Laptops</p>
+                <p>Cameras & Photos</p>
+                <p>Hardware</p>
+                <p>Smartphones & Tablets</p>
+                <p>TV & Aduio</p>
+                <p>Gadgets </p>
+                <p>Car Electronics</p>
+                <p>Video Games & Consoles</p>
+                <p>Accessories</p>
+            </div>
+            <div class="filterPrice">
+                <h5>Filtter By</h5>
+                <p class="tit">price</p>
+                <input type="range">
+                <p>Range : $0 - $560</p>
+                <p class="titl">color</p>
+                <div class="filterColors">
+                    <div style="background-color: rgb(54, 212, 14);" class="Fcolor"></div>
+                    <div style="background-color: rgb(153, 0, 255);" class="Fcolor"></div>
+                    <div style="background-color: rgb(0, 238, 255);" class="Fcolor"></div>
+                    <div style="background-color: rgb(38, 0, 255);" class="Fcolor"></div>
+                    <div style="background-color: red;" class="Fcolor"></div>
+                </div>
+            </div>
+            <div class="filterCategories">
+                <h5>Brands</h5>
+                <p>Apple</p>
+                <p>Beoplay</p>
+                <p>Google</p>
+                <p>Meizu</p>
+                <p>OnPlus</p>
+                <p>Samsung </p>
+                <p>Sony</p>
+                <p>Xiaomi</p>
+            </div>
+        </div>
+        <section style="flex-grow: 1;" class="">
+            <div style="display: flex;justify-content: space-between;align-items: center;width: 100%;" class="hot">
+              <h5 style="font-size: 16px;font-weight: bold;"><span style="color: #09c;">186</span> Proudcts Found</h5>
+              <h5 style="font-size: 16px;font-weight: bold;color: gray;"><span style="color: #09c;">Sorted By</span> :Proudct Price</h5>
+             
+            </div>
+            <div class="hotcontainer">
+              <div class="products-1 bestrated" style="width: 65%">
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_3.jpg.pagespeed.ic.5huJuP7Vcc.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Mouse</p>
+                    <h4>Rapoo 7100p Gray</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_7.jpg.pagespeed.ic.CWzzc10GcH.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>SmartWatch</p>
+                    <h4>Xiaomi Band 2..</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_5.jpg.pagespeed.ic.o6B80wnRBW.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Smartphone</p>
+                    <h4>Philips BT6900A</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xreview_3.jpg.pagespeed.ic.c7PizLSOMV.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Headphone</p>
+                    <h4>Beoplay</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+      
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_2.jpg.pagespeed.ic.HKQA4qV2Mn.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Ipod</p>
+                    <h4>Transcend T.Sonic</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_4.jpg.pagespeed.ic.YvShdYiv_G.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Mouse</p>
+                    <h4>Rapoo T8 White</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_8.jpg.pagespeed.ic.lAcp8-nlW0.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Camera</p>
+                    <h4>Canon EF</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_6.jpg.pagespeed.ic.K3dGMH41m4.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Smartphone</p>
+                    <h4>LUNA</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_4.jpg.pagespeed.ic.YvShdYiv_G.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Mouse</p>
+                    <h4>Rapoo T8 White</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_8.jpg.pagespeed.ic.lAcp8-nlW0.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Camera</p>
+                    <h4>Canon EF</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_6.jpg.pagespeed.ic.K3dGMH41m4.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Smartphone</p>
+                    <h4>LUNA</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                <div class="product-1">
+                  <img
+                    src="./img/new-arrivals/xnew_4.jpg.pagespeed.ic.YvShdYiv_G.webp"
+                    alt=""
+                  />
+                  <div>
+                    <h5>365$</h5>
+                    <p>Mouse</p>
+                    <h4>Rapoo T8 White</h4>
+                  </div>
+                  <button class="addtocartbutton">Add To Cart</button>
+                  <div class="discuss">
+                    <span class="amount">New</span>
+                  </div>
+                </div>
+                 
+              </div>
+            </div>
+            <naav style="position: absolute;bottom: -760px;left: 50%;" aria-label="...">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item " aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </naav>
+          </section>
+      </section>
+    <!-- recently Reviwed -->
+    <section style="margin-top: 50px;" class="rec-rev">
+      <div class="review-title">
+        <h2>Recently Viewed</h2>
+        <div>
+          <i class="fa-solid fa-angle-left left"></i>
+          <i class="fa-solid fa-angle-right right"></i>
+        </div>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper viewedcontainer">
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/best-seller/xview_4.jpg.pagespeed.ic.gcfPB3V9Wh.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/best-seller/xview_3.jpg.pagespeed.ic.HLpVYh24-I.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/recently-viewed/xview_6.jpg.pagespeed.ic.A0_NjsZwto.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/recently-viewed/xview_5.jpg.pagespeed.ic.LXZD3f2D0h.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/recently-viewed/xview_2.jpg.pagespeed.ic.C2lAFOmOFR.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+          <div class="swiper-slide viewed">
+            <img
+              src="./img/best-seller/xview_1.jpg.pagespeed.ic.c7PizLSOMV.webp"
+              alt=""
+            />
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+              "
+            >
+              <del>$365</del><span>$247</span>
+            </div>
+            <h5>Samsung J730F</h5>
+            <div
+              style="top: 10px; left: 10px; padding-right: 3px"
+              class="newtws"
+            >
+              <span class="newtw">New</span>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- brand -->
+    <section class="brand">
+      <div class="brand-container">
+        <img
+          src="./img/brand/xbrands_2.jpg.pagespeed.ic.aGWd17n_6c.webp"
+          alt=""
+        />
+        <img
+          src="./img/brand/xbrands_3.jpg.pagespeed.ic.qRuw2zePgn.webp"
+          alt=""
+        />
+        <img
+          src="./img/brand/xbrands_4.jpg.pagespeed.ic.XORj7-7yxR.webp"
+          alt=""
+        />
+        <img
+          src="./img/brand/xbrands_6.jpg.pagespeed.ic.YeinomSK6w.webp"
+          alt=""
+        />
+      </div>
+      <i class="fa-solid fa-angle-left left"></i>
+      <i class="fa-solid fa-angle-right right"></i>
+    </section>
+    <!-- contact -->
+    <section class="contacts">
+      <div class="contact-desc">
+        <img
+          style="background: transparent"
+          src="./img/WhatsApp Image 2024-07-20 at 23.44.46_3c50a81b.jpg"
+          alt=""
+        />
+        <div class="cont-parag">
+          <h3>Sign up for Newsletter</h3>
+          <p>..and receive %20 coupon for first shopping.</p>
+        </div>
+      </div>
+      <div class="search">
+        <form>
+          <input
+            style="width: 400px"
+            type="text"
+            placeholder="Enter Your Email Address For Product"
+          />
+          <!-- Example single danger button -->
+          <div
+            style="
+              width: 200px;
+              color: white;
+              font-size: 18px;
+              font-weight: bold;
+            "
+            class="search-icon"
+          >
+            Subscribe
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left">
+        <h1>OneTech</h1>
+        <h5>Got Question? Call Us 24/7</h5>
+        <span>+38 068 005 3570</span>
+        <span>omarmokdad2022@gmail.com</span>
+        <p>17 Princess Road, London Grester London NW18JR, UK</p>
+        <div class="footlinks">
+          <div><i class="fa-brands fa-facebook"></i></div>
+          <div><i class="fa-brands fa-youtube"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-instagram"></i></div>
+        </div>
+        <!-- <p class="copyright">
+          Copyright ©2024 All rights reserved | This template is made by
+          <span>Omar Samir</span>
+        </p> -->
+      </div>
+      <div class="footer-mid">
+        <h5>Find it Fast</h5>
+        <div class="footnavs">
+          <a href="#">Computers & Laptops</a>
+          <a href="#">Camera & Photo</a>
+          <a href="#">HardWare</a>
+          <a href="#">SmartPhones & Tablets</a>
+          <a href="#">TV & Audio</a>
+          <a href="#">Gadgets</a>
+          <a href="#">Car Electronics</a>
+          <a href="#">Vedio Game & Consoles</a>
+        </div>
+      </div>
+      <div class="footer-mid">
+        <h5>Find it Fast</h5>
+        <div class="footnavs">
+          <a href="#">My Account </a>
+          <a href="#">Order Tracking</a>
+          <a href="#">Wish List </a>
+          <a href="#">Customer Services </a>
+          <a href="#">Returns / Exchange </a>
+          <a href="#">FAQS </a>
+          <a href="#">Product Support </a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright ©2021 All rights reserved | This template is made by
+          <span>Omarsamir</span>
+        </p>
+        <div class="footimg">
+          <img src="./img/footer/footer1.webp" alt="" />
+          <img src="./img/footer/footer2.webp" alt="" />
+          <img src="./img/footer/footer3.webp" alt="" />
+          <img src="./img/footer/footer4.webp" alt="" />
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script>
+      // swiper container 1
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-container", {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".fa-angle-right",
+            prevEl: ".fa-angle-left",
+          },
+        });
+
+        // Optional: Hide navigation buttons if not needed
+        if (swiper.slides.length <= 5) {
+          document.querySelector(".fa-angle-left").style.display = "none";
+          document.querySelector(".fa-angle-right").style.display = "none";
+        }
+      });
+      // swiper container 2
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-container2", {
+          slidesPerView: 3,
+          spaceBetween: 100,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: false,
+            waitForTransition: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".fa-angle-right",
+            prevEl: ".fa-angle-left",
+          },
+        });
+
+        // Optional: Hide navigation buttons if not needed
+        if (swiper.slides.length <= 1) {
+          document.querySelector(".fa-angle-left").style.display = "none";
+          document.querySelector(".fa-angle-right").style.display = "none";
+        }
+      });
+    </script>
+    
+  </body>
+</html>
